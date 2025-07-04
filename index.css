@@ -8,10 +8,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
   background-color: white;
   font-family: Arial, sans-serif;
+  padding: 20px;
 }
 
 .container {
@@ -24,6 +25,8 @@ body {
   border-radius: 10px;
   background-color: #f9f9f9;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
 }
 
 #fileUpload {
@@ -31,4 +34,26 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
   cursor: pointer;
+  width: 100%;
+}
+
+.image-container {
+  display: flex; /* Use flexbox for displaying multiple images */
+  flex-wrap: wrap; /* Allow images to wrap to the next line */
+  justify-content: center; /* Center images horizontally */
+  gap: 10px; /* Space between images */
+  width: 90%;
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+.uploaded-image {
+  /* New class for individual uploaded images */
+  max-width: 80px; /* Even smaller size for multiple images */
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  object-fit: cover; /* Crop if necessary to fill the box */
 }
